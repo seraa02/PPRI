@@ -1,0 +1,33 @@
+# PPRI Survey Processing Pipeline — Python Dependencies
+# Install with: pip install -r requirements.txt
+# All dependencies run fully locally. No external API calls.
+
+# PDF to image conversion (requires poppler system package)
+pdf2image>=1.16.3
+
+# OCR (requires Tesseract system binary + language packs)
+pytesseract>=0.3.10
+
+# Image processing
+Pillow>=10.0.0
+
+# HTTP client for local Ollama API
+requests>=2.31.0
+
+# Excel file generation
+openpyxl>=3.1.2
+
+# Data manipulation and CSV export
+pandas>=2.0.0
+
+# Progress bar for batch processing
+tqdm>=4.65.0
+
+# .env file loader
+python-dotenv>=1.0.0
+
+# Numerical utilities
+numpy>=1.24.0
+
+# YAML form schema files
+pyyaml>=6.0

@@ -1,0 +1,244 @@
+{
+  "study_name": "MockStudy",
+  "survey_type": "POST",
+  "processed_files": [
+    "p1_post.pdf"
+  ],
+  "results": [
+    {
+      "filename": "p1_post.pdf",
+      "survey_type": "POST",
+      "personal_info": {
+        "name": "Annie Wesley",
+        "date": "01/22/2024",
+        "other": {
+          "class_location": "Wesley",
+          "phone_last4": "5678",
+          "zip_code": "77843",
+          "classes_attended": "4"
+        }
+      },
+      "questions": {
+        "Q1": {
+          "text": "What year were you born?",
+          "type": "numeric",
+          "answer": "1945",
+          "confidence": 0.95,
+          "page": 1
+        },
+        "Q2": {
+          "text": "Would you say that in general your health is:",
+          "type": "multiple_choice",
+          "answer": "Good",
+          "confidence": 1.0,
+          "page": 1
+        },
+        "Q3": {
+          "text": "How often do you feel lonely?",
+          "type": "multiple_choice",
+          "answer": "Sometimes",
+          "confidence": 1.0,
+          "page": 1
+        },
+        "Q4": {
+          "text": "How often do you feel isolated from those around you?",
+          "type": "multiple_choice",
+          "answer": "Rarely",
+          "confidence": 1.0,
+          "page": 1
+        },
+        "Q5": {
+          "text": "How sure are you that you can manage your condition so you can do the things you need and want to do?",
+          "type": "scale",
+          "answer": "8",
+          "confidence": 1.0,
+          "page": 1
+        },
+        "Q6": {
+          "text": "In general, would you say your mental wellbeing is:",
+          "type": "multiple_choice",
+          "answer": "Muy buena",
+          "confidence": 0.2,
+          "page": 1
+        },
+        "Q7": {
+          "text": "During the past 30 days, for about how many days did poor physical or mental health keep you from doing your usual activities?",
+          "type": "numeric",
+          "answer": "0",
+          "confidence": 1.0,
+          "page": 1
+        },
+        "Q8": {
+          "text": "Since this program began, what have you done to manage your chronic condition(s)? (Check all that apply)",
+          "type": "multiple_choice",
+          "answer": "Started or continued to exercise",
+          "confidence": 0.7,
+          "page": 2
+        },
+        "Q9": {
+          "text": "Since beginning this diabetes program, have you had your hemoglobin A1C checked?",
+          "type": "multiple_choice",
+          "answer": "Yes",
+          "confidence": 1.0,
+          "page": 2
+        },
+        "Q10": {
+          "text": "Do you have a machine (monitor) to measure your blood glucose level?",
+          "type": "checkbox",
+          "answer": "Yes",
+          "confidence": 1.0,
+          "page": 2
+        },
+        "Q11": {
+          "text": "How has this series helped you with your diabetes or understanding diabetes?",
+          "type": "handwritten",
+          "answer": "Helped me realize the portion size of the foods I eat.",
+          "confidence": 0.95,
+          "page": 2
+        },
+        "Q14": {
+          "text": "How would you rate your overall satisfaction with the quality of the program?",
+          "type": "multiple_choice",
+          "answer": "Very Satisfied",
+          "confidence": 1.0,
+          "page": 3
+        },
+        "Q15": {
+          "text": "How would you rate your satisfaction with your visits to the congregate meal site?",
+          "type": "multiple_choice",
+          "answer": "Very Satisfied",
+          "confidence": 1.0,
+          "page": 3
+        },
+        "Q16": {
+          "text": "How would you rate your satisfaction with the instructor(s)?",
+          "type": "multiple_choice",
+          "answer": "Very Satisfied",
+          "confidence": 1.0,
+          "page": 3
+        },
+        "Q17": {
+          "text": "How would you rate your satisfaction with the volunteer(s)?",
+          "type": "multiple_choice",
+          "answer": "Very Satisfied",
+          "confidence": 1.0,
+          "page": 3
+        },
+        "Q18": {
+          "text": "How would you rate your satisfaction with the overall length of the program?",
+          "type": "multiple_choice",
+          "answer": "Satisfied",
+          "confidence": 1.0,
+          "page": 3
+        },
+        "Q19": {
+          "text": "How would you rate your satisfaction with the time of the program?",
+          "type": "multiple_choice",
+          "answer": "Satisfied",
+          "confidence": 1.0,
+          "page": 3
+        },
+        "Q20": {
+          "text": "Additional comments",
+          "type": "handwritten",
+          "answer": "The program has been very helpful in managing my diabetes and improving my overall health.",
+          "confidence": 0.95,
+          "page": 3
+        },
+        "Q9a": {
+          "text": "If yes, what was the number?",
+          "type": "numeric",
+          "answer": "6.0",
+          "confidence": 0.95,
+          "page": 2
+        },
+        "Q12a": {
+          "text": "Follow a healthful eating plan?",
+          "type": "scale",
+          "answer": "6",
+          "confidence": 1.0,
+          "page": 2
+        },
+        "Q13a": {
+          "text": "Can eat your meals every 4 to 5 hours every day, including breakfast?",
+          "type": "multiple_choice",
+          "answer": "Confident",
+          "confidence": 1.0,
+          "page": 3
+        },
+        "Q12b": {
+          "text": "Eat five or more servings of fruits and vegetables?",
+          "type": "scale",
+          "answer": "6",
+          "confidence": 1.0,
+          "page": 2
+        },
+        "Q13b": {
+          "text": "Can follow your diet when you have to prepare or share food with other people who do not have diabetes?",
+          "type": "multiple_choice",
+          "answer": "Somewhat Confident",
+          "confidence": 0.85,
+          "page": 2
+        },
+        "Q12c": {
+          "text": "Eat high-fat foods?",
+          "type": "scale",
+          "answer": "0",
+          "confidence": 1.0,
+          "page": 2
+        },
+        "Q13c": {
+          "text": "Can choose the appropriate foods to eat when you are hungry (for example, snacks)?",
+          "type": "multiple_choice",
+          "answer": "Confident",
+          "confidence": 1.0,
+          "page": 3
+        },
+        "Q12d": {
+          "text": "Participate in at least 30 minutes of physical activity?",
+          "type": "scale",
+          "answer": "6",
+          "confidence": 1.0,
+          "page": 2
+        },
+        "Q13d": {
+          "text": "Can be physically active 15 to 30 minutes, 4 to 5 times a week?",
+          "type": "multiple_choice",
+          "answer": "Somewhat Confident",
+          "confidence": 0.85,
+          "page": 2
+        },
+        "Q12e": {
+          "text": "Space your carbohydrates evenly through the day?",
+          "type": "scale",
+          "answer": "6",
+          "confidence": 1.0,
+          "page": 2
+        },
+        "Q12f": {
+          "text": "Test your blood sugar/glucose?",
+          "type": "scale",
+          "answer": "6",
+          "confidence": 1.0,
+          "page": 2
+        },
+        "Q12g": {
+          "text": "Check your feet?",
+          "type": "scale",
+          "answer": "6",
+          "confidence": 1.0,
+          "page": 2
+        }
+      },
+      "flagged_questions": [
+        "Q6"
+      ],
+      "status": "flagged",
+      "pages_processed": 5,
+      "schema_used": "forms/falls_prevention_post.yaml",
+      "error": null
+    }
+  ],
+  "last_batch": 1,
+  "last_updated": "2026-03-03T00:11:43.699182+00:00"
+}

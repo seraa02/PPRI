@@ -1,0 +1,237 @@
+# ============================================================
+# PPRI Form Schema — POST Survey
+# ============================================================
+# Copy and adapt this file for your study's POST questionnaire.
+# Point to it in .env with: POST_SCHEMA_FILE=forms/your_post_schema.yaml
+# ============================================================
+# ============================================================
+# ACL CDSME MEALS & SYP — POST Survey Schema
+# ============================================================
+
+study_name: "ACL CDSME MEALS & SYP"
+survey_type: POST
+language: "eng"
+
+# ------------------------------------------------------------
+# HEADER / PERSONAL INFORMATION
+# ------------------------------------------------------------
+personal_info:
+  - field: name
+    label: "Participant Name"
+    type: handwritten
+
+  - field: class_location
+    label: "Class Location"
+    type: handwritten
+
+  - field: phone_last4
+    label: "Last 4 digits of Phone #"
+    type: numeric
+    digits: 4
+
+  - field: zip_code
+    label: "Participant ZIP Code"
+    type: numeric
+    digits: 5
+
+  - field: classes_attended
+    label: "Number of Classes Attended"
+    type: numeric
+    range: [1, 4]
+
+  - field: date
+    label: "Date"
+    type: handwritten
+    format: "MM/DD/YYYY"
+
+# ------------------------------------------------------------
+# QUESTIONS
+# ------------------------------------------------------------
+questions:
+
+  - number: Q1
+    text: "What year were you born?"
+    type: numeric
+    range: [1900, 2025]
+
+  - number: Q2
+    text: "Would you say that in general your health is:"
+    type: multiple_choice
+    options: ["Excellent", "Very Good", "Good", "Fair", "Poor"]
+
+  - number: Q3
+    text: "How often do you feel lonely?"
+    type: multiple_choice
+    options: ["Always", "Often", "Sometimes", "Rarely", "Never"]
+
+  - number: Q4
+    text: "How often do you feel isolated from those around you?"
+    type: multiple_choice
+    options: ["Always", "Often", "Sometimes", "Rarely", "Never"]
+
+  - number: Q5
+    text: "How sure are you that you can manage your condition so you can do the things you need and want to do?"
+    type: scale
+    range: [0, 10]
+
+  - number: Q6
+    text: "In general, would you say your mental wellbeing is:"
+    type: multiple_choice
+    options: ["Excellent", "Very Good", "Good", "Fair", "Poor"]
+
+  - number: Q7
+    text: "During the past 30 days, about how many days did poor physical or mental health keep you from doing your usual activities?"
+    type: numeric
+    range: [0, 30]
+
+  - number: Q8
+    text: "Since this program began, what have you done to manage your chronic condition(s)? (Check all that apply)"
+    type: multiple_choice
+    options:
+      - "Talked to a family member or friend about my health"
+      - "Talked to a healthcare provider about how I can better manage my chronic condition"
+      - "Had my medications reviewed by a healthcare provider or pharmacist"
+      - "Started or continued to exercise"
+      - "Made changes to how I choose the food I eat"
+      - "Participate in or plan to participate in another health-related or exercise program in my community"
+
+  - number: Q9
+    text: "Since beginning this diabetes program, have you had your hemoglobin A1C checked?"
+    type: multiple_choice
+    options: ["Yes", "No", "Don't Know"]
+
+  - number: Q9a
+    text: "If yes, what was the number?"
+    type: numeric
+    range: [4.0, 14.0]
+
+  - number: Q10
+    text: "Do you have a machine (monitor) to measure your blood glucose level?"
+    type: checkbox
+    options: ["Yes", "No"]
+
+  - number: Q11
+    text: "How has this series helped you with your diabetes or understanding diabetes?"
+    type: handwritten
+
+  # ------------------------------------------------------------
+  # Q12 — Last 7 Days (0–7 scale)
+  # ------------------------------------------------------------
+  - number: Q12a
+    text: "Follow a healthful eating plan?"
+    type: scale
+    range: [0, 7]
+
+  - number: Q12b
+    text: "Eat five or more servings of fruits and vegetables?"
+    type: scale
+    range: [0, 7]
+
+  - number: Q12c
+    text: "Eat high-fat foods?"
+    type: scale
+    range: [0, 7]
+
+  - number: Q12d
+    text: "Participate in at least 30 minutes of physical activity?"
+    type: scale
+    range: [0, 7]
+
+  - number: Q12e
+    text: "Space your carbohydrates evenly through the day?"
+    type: scale
+    range: [0, 7]
+
+  - number: Q12f
+    text: "Test your blood sugar/glucose?"
+    type: scale
+    range: [0, 7]
+
+  - number: Q12g
+    text: "Check your feet?"
+    type: scale
+    range: [0, 7]
+
+  # ------------------------------------------------------------
+  # Q13 — Confidence Matrix
+  # ------------------------------------------------------------
+  - number: Q13a
+    text: "Can eat your meals every 4 to 5 hours every day, including breakfast?"
+    type: multiple_choice
+    options:
+      - "Not at all Confident"
+      - "Somewhat Confident"
+      - "Confident"
+      - "Very Confident"
+      - "Extremely Confident"
+      - "Does not apply to me"
+
+  - number: Q13b
+    text: "Can follow your diet when you have to prepare or share food with other people who do not have diabetes?"
+    type: multiple_choice
+    options:
+      - "Not at all Confident"
+      - "Somewhat Confident"
+      - "Confident"
+      - "Very Confident"
+      - "Extremely Confident"
+      - "Does not apply to me"
+
+  - number: Q13c
+    text: "Can choose the appropriate foods to eat when you are hungry (for example, snacks)?"
+    type: multiple_choice
+    options:
+      - "Not at all Confident"
+      - "Somewhat Confident"
+      - "Confident"
+      - "Very Confident"
+      - "Extremely Confident"
+      - "Does not apply to me"
+
+  - number: Q13d
+    text: "Can be physically active 15 to 30 minutes, 4 to 5 times a week?"
+    type: multiple_choice
+    options:
+      - "Not at all Confident"
+      - "Somewhat Confident"
+      - "Confident"
+      - "Very Confident"
+      - "Extremely Confident"
+      - "Does not apply to me"
+
+  # ------------------------------------------------------------
+  # Satisfaction Questions
+  # ------------------------------------------------------------
+  - number: Q14
+    text: "How would you rate your overall satisfaction with the quality of the program?"
+    type: multiple_choice
+    options: ["Very Dissatisfied", "Dissatisfied", "Okay", "Satisfied", "Very Satisfied"]
+
+  - number: Q15
+    text: "How would you rate your satisfaction with your visits to the congregate meal site?"
+    type: multiple_choice
+    options: ["Very Dissatisfied", "Dissatisfied", "Okay", "Satisfied", "Very Satisfied"]
+
+  - number: Q16
+    text: "How would you rate your satisfaction with the instructor(s)?"
+    type: multiple_choice
+    options: ["Very Dissatisfied", "Dissatisfied", "Okay", "Satisfied", "Very Satisfied"]
+
+  - number: Q17
+    text: "How would you rate your satisfaction with the volunteer(s)?"
+    type: multiple_choice
+    options: ["Very Dissatisfied", "Dissatisfied", "Okay", "Satisfied", "Very Satisfied"]
+
+  - number: Q18
+    text: "How would you rate your satisfaction with the overall length of the program?"
+    type: multiple_choice
+    options: ["Very Dissatisfied", "Dissatisfied", "Okay", "Satisfied", "Very Satisfied"]
+
+  - number: Q19
+    text: "How would you rate your satisfaction with the time of the program?"
+    type: multiple_choice
+    options: ["Very Dissatisfied", "Dissatisfied", "Okay", "Satisfied", "Very Satisfied"]
+
+  - number: Q20
+    text: "Additional comments"
+    type: handwritten

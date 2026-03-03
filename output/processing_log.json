@@ -1,0 +1,24 @@
+[
+  {
+    "filename": "p1_pre.pdf",
+    "survey_type": "PRE",
+    "timestamp": "2026-03-02T23:37:08.274427+00:00",
+    "time_taken_seconds": 548.74,
+    "status": "success",
+    "pages_processed": 2,
+    "questions_extracted": 23,
+    "flagged_count": 0,
+    "error": null
+  },
+  {
+    "filename": "p1_post.pdf",
+    "survey_type": "POST",
+    "timestamp": "2026-03-03T00:11:43.690544+00:00",
+    "time_taken_seconds": 2075.41,
+    "status": "flagged",
+    "pages_processed": 5,
+    "questions_extracted": 30,
+    "flagged_count": 1,
+    "error": null
+  }
+]

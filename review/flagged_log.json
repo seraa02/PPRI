@@ -1,0 +1,28 @@
+{
+  "flagged_entries": [
+    {
+      "filename": "p1_pre.pdf",
+      "page_number": 1,
+      "question_number": "Q7",
+      "raw_ocr_text": "[see processing_log.json for OCR context]",
+      "confidence_note": "Confidence 0.20 below threshold 0.7 — answer failed schema validation or is out of range",
+      "selected_answer": "High school graduate or GED"
+    },
+    {
+      "filename": "p1_pre.pdf",
+      "page_number": 1,
+      "question_number": "Q7",
+      "raw_ocr_text": "[see processing_log.json for OCR context]",
+      "confidence_note": "Confidence 0.20 below threshold 0.7 — answer failed schema validation or is out of range",
+      "selected_answer": "High school graduate or GED"
+    },
+    {
+      "filename": "p1_post.pdf",
+      "page_number": 1,
+      "question_number": "Q6",
+      "raw_ocr_text": "[see processing_log.json for OCR context]",
+      "confidence_note": "Confidence 0.20 below threshold 0.7 — answer failed schema validation or is out of range",
+      "selected_answer": "Muy buena"
+    }
+  ]
+}

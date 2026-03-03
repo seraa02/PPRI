@@ -1,0 +1,148 @@
+# ============================================================
+# PPRI Form Schema — PRE Survey
+# ============================================================
+# Copy this file, rename it for your study, and fill in the
+# exact questions and answer options from your actual form.
+# Point to it in .env with: PRE_SCHEMA_FILE=forms/your_pre_schema.yaml
+#
+# Supported question types:
+#   checkbox        — one or more boxes to check (Yes/No, etc.)
+#   true_false      — participant circles or marks T or F
+#   multiple_choice — participant selects one or more printed options
+#   scale           — circled or marked number on a range
+#   numeric         — handwritten or printed number
+#   handwritten     — open text written by participant
+#   fill_blank      — printed blank the participant writes in
+# ============================================================
+
+study_name: "Falls Prevention"
+survey_type: PRE
+language: "eng+spa"
+
+# ------------------------------------------------------------
+# Personal information fields at the top of the form.
+# List every labeled field in the header section.
+# ------------------------------------------------------------
+personal_info:
+  - field: name
+    label: "Name / Nombre"
+    type: handwritten
+    description: "Participant's full name, handwritten"
+
+  - field: date
+    label: "Date / Fecha"
+    type: handwritten
+    format: "MM/DD/YYYY"
+    description: "Date the form was completed"
+
+  - field: phone_last4
+    label: "Last 4 digits of phone / Últimos 4 dígitos del teléfono"
+    type: numeric
+    digits: 4
+    description: "Last 4 digits of participant phone number"
+
+  - field: zip_code
+    label: "ZIP Code / Código Postal"
+    type: numeric
+    digits: 5
+    description: "Participant ZIP code"
+
+  - field: participant_id
+    label: "Participant ID"
+    type: alphanumeric
+    description: "Study participant identifier"
+
+  - field: center
+    label: "Center / Centro"
+    type: handwritten
+    description: "Name of the senior center where form was completed"
+
+# ------------------------------------------------------------
+# Survey questions — list EVERY question on the form.
+# The order here should match the order on the physical form.
+# ------------------------------------------------------------
+questions:
+  - number: Q1
+    text: "Did your doctor or other health care provider suggest that you attend this program?"
+    text_es: "¿Su médico u otro proveedor de salud le sugirió que asistiera a este programa?"
+    type: checkbox
+    options: ["Yes", "No"]
+
+  - number: Q2
+    text: "Age"
+    text_es: "Edad"
+    type: numeric
+    range: [18, 120]
+    description: "Participant's age in years"
+
+  - number: Q3
+    text: "Are you currently married or living with a partner?"
+    text_es: "¿Está usted actualmente casado/a o viviendo con una pareja?"
+    type: checkbox
+    options: ["Yes", "No"]
+
+  - number: Q4
+    text: "Do you live alone?"
+    text_es: "¿Vive usted solo/a?"
+    type: checkbox
+    options: ["Yes", "No"]
+
+  - number: Q5
+    text: "What is your race or ethnicity? (select all that apply)"
+    text_es: "¿Cuál es su raza o etnicidad? (seleccione todas las que apliquen)"
+    type: multiple_choice
+    options:
+      - "White"
+      - "Black or African American"
+      - "Hispanic or Latino"
+      - "Asian"
+      - "American Indian or Alaska Native"
+      - "Some other race"
+
+  - number: Q6
+    text: "What is your gender?"
+    text_es: "¿Cuál es su género?"
+    type: checkbox
+    options: ["Man", "Woman", "Non-binary / third gender", "Prefer not to say"]
+
+  - number: Q7
+    text: "What is the highest level of education you have completed?"
+    text_es: "¿Cuál es el nivel más alto de educación que ha completado?"
+    type: multiple_choice
+    options:
+      - "Less than high school"
+      - "High School / GED"
+      - "Some college"
+      - "College degree or higher"
+
+  - number: Q8
+    text: "In the past 12 months, have you fallen?"
+    text_es: "En los últimos 12 meses, ¿se ha caído?"
+    type: checkbox
+    options: ["Yes", "No"]
+
+  - number: Q9
+    text: "Are you afraid of falling?"
+    text_es: "¿Tiene miedo de caerse?"
+    type: checkbox
+    options: ["Yes", "No"]
+
+  - number: Q10
+    text: "In general, how would you rate your health?"
+    text_es: "En general, ¿cómo calificaría su salud?"
+    type: multiple_choice
+    options: ["Excellent", "Very Good", "Good", "Fair", "Poor"]
+
+  - number: Q11
+    text: "How often do you exercise?"
+    text_es: "¿Con qué frecuencia hace ejercicio?"
+    type: multiple_choice
+    options: ["Never", "Rarely", "Sometimes", "Often", "Always"]
+
+  - number: Q12
+    text: "On a scale of 0 to 10, how confident are you that you can do physical activity without falling? (0=Not at all confident, 10=Completely confident)"
+    text_es: "En una escala del 0 al 10, ¿qué tan seguro/a está de que puede hacer actividad física sin caerse?"
+    type: scale
+    range: [0, 10]
+
+  # Add more questions here following the same format...

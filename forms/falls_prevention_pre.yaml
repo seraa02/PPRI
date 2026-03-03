@@ -1,0 +1,206 @@
+# ============================================================
+# PPRI Form Schema — PRE Survey
+# ============================================================
+# Copy this file, rename it for your study, and fill in the
+# exact questions and answer options from your actual form.
+# Point to it in .env with: PRE_SCHEMA_FILE=forms/your_pre_schema.yaml
+#
+# Supported question types:
+#   checkbox        — one or more boxes to check (Yes/No, etc.)
+#   true_false      — participant circles or marks T or F
+#   multiple_choice — participant selects one or more printed options
+#   scale           — circled or marked number on a range
+#   numeric         — handwritten or printed number
+#   handwritten     — open text written by participant
+#   fill_blank      — printed blank the participant writes in
+# ============================================================
+# ============================================================
+# ACL CDSME MEALS — PRE Survey Schema
+# ============================================================
+
+study_name: "ACL CDSME MEALS"
+survey_type: PRE
+language: "eng"
+
+# ------------------------------------------------------------
+# HEADER / PERSONAL INFORMATION
+# ------------------------------------------------------------
+personal_info:
+  - field: name
+    label: "Name"
+    type: handwritten
+
+  - field: date
+    label: "Date"
+    type: handwritten
+    format: "MM/DD/YYYY"
+
+  - field: phone_last4
+    label: "Last 4 digits of Phone #"
+    type: numeric
+    digits: 4
+
+  - field: zip_code
+    label: "ZIP Code"
+    type: numeric
+    digits: 5
+
+# ------------------------------------------------------------
+# QUESTIONS
+# ------------------------------------------------------------
+questions:
+
+  - number: Q1
+    text: "Did your doctor or other health care provider suggest that you attend this program?"
+    type: checkbox
+    options: ["Yes", "No"]
+
+  - number: Q2
+    text: "How old are you today?"
+    type: numeric
+    range: [0, 120]
+
+  - number: Q3
+    text: "Do you live alone?"
+    type: checkbox
+    options: ["Yes", "No"]
+
+  - number: Q4
+    text: "Are you of Hispanic, Latino, or Spanish origin?"
+    type: checkbox
+    options: ["Yes", "No"]
+
+  - number: Q5
+    text: "What is your race? (Check all that apply)"
+    type: multiple_choice
+    options:
+      - "American Indian or Alaska Native"
+      - "Asian"
+      - "Black or African American"
+      - "Native Hawaiian or other Pacific Islander"
+      - "White"
+      - "Some other race"
+
+  - number: Q6
+    text: "What is your current gender?"
+    type: multiple_choice
+    options:
+      - "Man"
+      - "Woman"
+      - "Prefer not to answer"
+
+  - number: Q7
+    text: "What is the highest grade or year of school you completed?"
+    type: multiple_choice
+    options:
+      - "Some elementary, middle, or high school"
+      - "High school graduate or GED"
+      - "Some college of technical school"
+      - "College (4 years or more)"
+
+  - number: Q8
+    text: "Have you ever served in the military?"
+    type: checkbox
+    options: ["Yes", "No"]
+
+  - number: Q9
+    text: "During the past year, did you provide regular care or assistance to a friend or family member who has a long-term health problem or disability?"
+    type: checkbox
+    options: ["Yes", "No"]
+
+  - number: Q10
+    text: "In general, would you say that your health is:"
+    type: multiple_choice
+    options: ["Excellent", "Very Good", "Good", "Fair", "Poor"]
+
+  # ------------------------------------------------------------
+  # Q11 — Chronic Conditions (Table on Page 2)
+  # ------------------------------------------------------------
+  - number: Q11
+    text: "Has a health care provider ever told you that you have any of the following chronic conditions?"
+    type: multiple_choice
+    options:
+      - "Alzheimer’s Disease or other Dementia"
+      - "Anxiety Disorder"
+      - "Arthritis/Rheumatic Disease"
+      - "Asthma/Emphysema/Other Chronic Breathing or Lung Problem"
+      - "Cancer or Cancer Survivor"
+      - "Chronic Pain"
+      - "Depression"
+      - "Diabetes (High Blood Sugar)"
+      - "Heart Disease"
+      - "High Cholesterol"
+      - "Hypertension (High Blood Pressure)"
+      - "Kidney Disease"
+      - "Malnutrition"
+      - "Obesity"
+      - "Osteoporosis (Low Bone Density)"
+      - "Post-Traumatic Stress Disorder"
+      - "Schizophrenia or other Psychotic Disorder"
+      - "Stroke"
+      - "Substance Use Disorder"
+      - "Urinary Incontinence"
+      - "Other Chronic Condition"
+
+  # ------------------------------------------------------------
+  # Q12 — Functional Limitations (a–f)
+  # ------------------------------------------------------------
+  - number: Q12a
+    text: "Are you deaf or do you have serious difficulty hearing?"
+    type: checkbox
+    options: ["Yes", "No"]
+
+  - number: Q12b
+    text: "Are you blind or do you have serious difficulty seeing, even when wearing glasses?"
+    type: checkbox
+    options: ["Yes", "No"]
+
+  - number: Q12c
+    text: "Do you have serious difficulty walking or climbing stairs?"
+    type: checkbox
+    options: ["Yes", "No"]
+
+  - number: Q12d
+    text: "Do you have difficulty dressing or bathing?"
+    type: checkbox
+    options: ["Yes", "No"]
+
+  - number: Q12e
+    text: "Because of a physical, mental, or emotional condition, do you have serious difficulty concentrating, remembering, or making decisions?"
+    type: checkbox
+    options: ["Yes", "No"]
+
+  - number: Q12f
+    text: "Because of a physical, mental, or emotional condition, do you have difficulty doing errands alone such as visiting a doctor’s office or shopping?"
+    type: checkbox
+    options: ["Yes", "No"]
+
+  - number: Q13
+    text: "How often do you feel lonely?"
+    type: multiple_choice
+    options: ["Always", "Often", "Sometimes", "Rarely", "Never"]
+
+  - number: Q14
+    text: "How often do you feel isolated from those around you?"
+    type: multiple_choice
+    options: ["Always", "Often", "Sometimes", "Rarely", "Never"]
+
+  - number: Q15
+    text: "How sure are you that you can manage your condition so you can do the things you need and want to do?"
+    type: scale
+    range: [0, 10]
+
+  - number: Q16
+    text: "In general, would you say your mental wellbeing is:"
+    type: multiple_choice
+    options: ["Excellent", "Very Good", "Good", "Fair", "Poor"]
+
+  - number: Q17
+    text: "Overall, how confident are you in your ability to engage in healthy behavior?"
+    type: scale
+    range: [0, 10]
+
+  - number: Q18
+    text: "Have you attended a congregate meal site before?"
+    type: checkbox
+    options: ["Yes", "No"]

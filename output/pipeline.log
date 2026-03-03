@@ -1,0 +1,61 @@
+2026-03-02 17:27:59 [INFO    ] ====================================================================
+2026-03-02 17:27:59 [INFO    ]   PPRI Survey Form Processing Pipeline
+2026-03-02 17:27:59 [INFO    ]   PRIVACY: 100%% local — no data leaves this machine
+2026-03-02 17:27:59 [INFO    ] ====================================================================
+2026-03-02 17:27:59 [INFO    ]   Study:             MockStudy
+2026-03-02 17:27:59 [INFO    ]   PRE folder:        /Users/saheraa/Desktop/PPRI/PRE
+2026-03-02 17:27:59 [INFO    ]   POST folder:       /Users/saheraa/Desktop/PPRI/POST
+2026-03-02 17:27:59 [INFO    ]   Output folder:     /Users/saheraa/Desktop/PPRI/output
+2026-03-02 17:27:59 [INFO    ]   Ollama model:      qwen2.5vl:7b  @ http://localhost:11434
+2026-03-02 17:27:59 [INFO    ]   OCR language:      eng+spa
+2026-03-02 17:27:59 [INFO    ]   DPI:               300
+2026-03-02 17:27:59 [INFO    ]   Batch size:        50
+2026-03-02 17:27:59 [INFO    ]   Confidence thresh: 0.7
+2026-03-02 17:27:59 [INFO    ] ====================================================================
+2026-03-02 17:27:59 [INFO    ] Checking Ollama connection ...
+2026-03-02 17:27:59 [INFO    ] Ollama connected. Model 'qwen2.5vl:7b' is ready.
+2026-03-02 17:27:59 [INFO    ] Tesseract OCR: found.
+2026-03-02 17:27:59 [INFO    ] pdf2image: found.
+2026-03-02 17:27:59 [INFO    ] Found 1 PRE PDF(s) and 1 POST PDF(s).
+2026-03-02 17:27:59 [INFO    ] 
+────────────────────────────────────────────────────────────────────
+2026-03-02 17:27:59 [INFO    ]   Processing PRE surveys (1 file(s)) ...
+2026-03-02 17:27:59 [INFO    ] ────────────────────────────────────────────────────────────────────
+2026-03-02 17:27:59 [INFO    ] Processing 1 pending PRE PDF(s) (skipping 0 already done).
+2026-03-02 17:27:59 [INFO    ] Starting batch 1/1 (1 file(s))
+2026-03-02 17:27:59 [INFO    ] Loaded schema: ACL CDSME MEALS PRE (23 questions, 4 personal-info fields)
+2026-03-02 17:37:08 [INFO    ] [SUCCESS ] p1_pre.pdf | 548.7s | 23 questions | 0 flagged
+2026-03-02 17:37:08 [INFO    ] Checkpoint saved after batch 1.
+2026-03-02 17:37:08 [INFO    ] PRE complete — total=1, success=1, flagged=0, error=0
+2026-03-02 17:37:08 [INFO    ] 
+────────────────────────────────────────────────────────────────────
+2026-03-02 17:37:08 [INFO    ]   Processing POST surveys (1 file(s)) ...
+2026-03-02 17:37:08 [INFO    ] ────────────────────────────────────────────────────────────────────
+2026-03-02 17:37:08 [INFO    ] Processing 1 pending POST PDF(s) (skipping 0 already done).
+2026-03-02 17:37:08 [INFO    ] Starting batch 1/1 (1 file(s))
+2026-03-02 17:37:08 [INFO    ] Loaded schema: ACL CDSME MEALS & SYP POST (30 questions, 6 personal-info fields)
+2026-03-02 18:11:43 [INFO    ] [FLAGGED ] p1_post.pdf | 2075.4s | 30 questions | 1 flagged
+2026-03-02 18:11:43 [INFO    ] Checkpoint saved after batch 1.
+2026-03-02 18:11:43 [INFO    ] POST complete — total=1, success=0, flagged=1, error=0
+2026-03-02 18:11:43 [INFO    ] 
+────────────────────────────────────────────────────────────────────
+2026-03-02 18:11:43 [INFO    ]   Writing output files ...
+2026-03-02 18:11:43 [INFO    ] Excel saved: output/MockStudy_results.xlsx
+2026-03-02 18:11:43 [INFO    ] PRE CSV saved: output/MockStudy_PRE_results.csv
+2026-03-02 18:11:43 [INFO    ] POST CSV saved: output/MockStudy_POST_results.csv
+2026-03-02 18:11:43 [INFO    ] ====================================================================
+2026-03-02 18:11:43 [INFO    ]   PIPELINE COMPLETE
+2026-03-02 18:11:43 [INFO    ]   Total processed:    2
+2026-03-02 18:11:43 [INFO    ]   Success:            1
+2026-03-02 18:11:43 [INFO    ]   Flagged for review: 1
+2026-03-02 18:11:43 [INFO    ]   Errors:             0
+2026-03-02 18:11:43 [INFO    ] --------------------------------------------------------------------
+2026-03-02 18:11:43 [INFO    ]   Excel output:  output/MockStudy_results.xlsx
+2026-03-02 18:11:43 [INFO    ]   PRE CSV:       output/MockStudy_PRE_results.csv
+2026-03-02 18:11:43 [INFO    ]   POST CSV:      output/MockStudy_POST_results.csv
+2026-03-02 18:11:43 [INFO    ]   Pipeline log:  output/pipeline.log
+2026-03-02 18:11:43 [INFO    ] --------------------------------------------------------------------
+2026-03-02 18:11:43 [INFO    ]   1 file(s) have low-confidence answers flagged for review.
+2026-03-02 18:11:43 [INFO    ]   To inspect them, run:
+2026-03-02 18:11:43 [INFO    ]     python review/review_viewer.py
+2026-03-02 18:11:43 [INFO    ] ====================================================================

@@ -1,0 +1,83 @@
+# ============================================================
+# PPRI Form Schema — POST Survey
+# ============================================================
+# Copy and adapt this file for your study's POST questionnaire.
+# Point to it in .env with: POST_SCHEMA_FILE=forms/your_post_schema.yaml
+# ============================================================
+
+study_name: "Falls Prevention"
+survey_type: POST
+language: "eng+spa"
+
+personal_info:
+  - field: name
+    label: "Name / Nombre"
+    type: handwritten
+
+  - field: date
+    label: "Date / Fecha"
+    type: handwritten
+    format: "MM/DD/YYYY"
+
+  - field: phone_last4
+    label: "Last 4 digits of phone"
+    type: numeric
+    digits: 4
+
+  - field: participant_id
+    label: "Participant ID"
+    type: alphanumeric
+
+  - field: center
+    label: "Center / Centro"
+    type: handwritten
+
+questions:
+  - number: Q1
+    text: "In the past 3 months, have you fallen?"
+    text_es: "En los últimos 3 meses, ¿se ha caído?"
+    type: checkbox
+    options: ["Yes", "No"]
+
+  - number: Q2
+    text: "On a scale of 0 to 10, how confident are you now that you can do physical activity without falling?"
+    text_es: "En una escala del 0 al 10, ¿qué tan seguro/a está ahora de que puede hacer actividad física sin caerse?"
+    type: scale
+    range: [0, 10]
+
+  - number: Q3
+    text: "Are you still afraid of falling?"
+    text_es: "¿Todavía tiene miedo de caerse?"
+    type: checkbox
+    options: ["Yes", "No"]
+
+  - number: Q4
+    text: "Did the program help you?"
+    text_es: "¿Le ayudó el programa?"
+    type: checkbox
+    options: ["Yes", "No", "Somewhat"]
+
+  - number: Q5
+    text: "How would you rate your health now?"
+    text_es: "¿Cómo calificaría su salud ahora?"
+    type: multiple_choice
+    options: ["Excellent", "Very Good", "Good", "Fair", "Poor"]
+
+  - number: Q6
+    text: "How often do you exercise now?"
+    text_es: "¿Con qué frecuencia hace ejercicio ahora?"
+    type: multiple_choice
+    options: ["Never", "Rarely", "Sometimes", "Often", "Always"]
+
+  - number: Q7
+    text: "Overall, how satisfied are you with this program?"
+    text_es: "En general, ¿qué tan satisfecho/a está con este programa?"
+    type: multiple_choice
+    options: ["Very Satisfied", "Satisfied", "Neutral", "Dissatisfied", "Very Dissatisfied"]
+
+  - number: Q8
+    text: "Please describe any changes you noticed in yourself after attending the program."
+    text_es: "Por favor describa cualquier cambio que notó en usted mismo/a después de asistir al programa."
+    type: handwritten
+
+  # Add more questions here...
