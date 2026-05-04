@@ -288,7 +288,7 @@ def process_pdf(
             )
         except RuntimeError:
             record["status"] = "error"
-            record["error"] = "Ollama is not running. Start it with: ollama serve"
+            record["error"] = "Vision model inference failed. Check logs for details."
             return record
 
         # ------------------------------------------------------------------

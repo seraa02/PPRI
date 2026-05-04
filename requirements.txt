@@ -1,33 +1,55 @@
 # PPRI Survey Processing Pipeline — Python Dependencies
-# Install with: pip install -r requirements.txt
-# All dependencies run fully locally. No external API calls.
+# =========================================================
+# INSTALL ORDER MATTERS — follow exactly:
+#
+#   Step 1 (torch must come first):
+#   pip install torch==2.4.0+cu121 torchvision==0.19.0+cu121 --index-url https://download.pytorch.org/whl/cu121
+#
+#   Step 2 (everything else):
+#   pip install -r requirements.txt
+#
+#   Step 3 (system tools via conda — NOT pip):
+#   conda install -c conda-forge poppler tesseract -y
+#
+# All processing runs fully locally. No external API calls. No API keys.
+# =========================================================
 
-# PDF to image conversion (requires poppler system package)
+# PDF to image conversion
+# Requires poppler binary: conda install -c conda-forge poppler -y
 pdf2image>=1.16.3
 
-# OCR (requires Tesseract system binary + language packs)
+# OCR text extraction
+# Requires tesseract binary: conda install -c conda-forge tesseract -y
 pytesseract>=0.3.10
 
 # Image processing
 Pillow>=10.0.0
 
-# HTTP client for local Ollama API
-requests>=2.31.0
+# PyTorch — PINNED to exact working version with CUDA 12.1
+# Install BEFORE running this file using the command at the top.
+# pip will skip these if already installed at the correct version.
+torch==2.4.0+cu121
+torchvision==0.19.0+cu121
 
-# Excel file generation
+# HuggingFace — vision model inference (Qwen2-VL runs fully locally on GPU)
+transformers>=4.45.0
+accelerate>=0.26.0
+qwen-vl-utils>=0.0.2
+
+# Excel output
 openpyxl>=3.1.2
 
-# Data manipulation and CSV export
+# CSV and data handling
 pandas>=2.0.0
 
-# Progress bar for batch processing
+# Progress bars
 tqdm>=4.65.0
 
-# .env file loader
+# .env config loader
 python-dotenv>=1.0.0
 
-# Numerical utilities
-numpy>=1.24.0
+# Numerical — MUST stay below 2.0 (torch 2.4 incompatible with numpy 2.x)
+numpy>=1.24.0,<2.0.0
 
-# YAML form schema files
+# YAML schema files
 pyyaml>=6.0

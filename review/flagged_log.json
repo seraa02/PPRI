@@ -3,26 +3,90 @@
     {
       "filename": "p1_pre.pdf",
       "page_number": 1,
-      "question_number": "Q7",
+      "question_number": "Q2",
       "raw_ocr_text": "[see processing_log.json for OCR context]",
-      "confidence_note": "Confidence 0.20 below threshold 0.7 — answer failed schema validation or is out of range",
-      "selected_answer": "High school graduate or GED"
+      "confidence_note": "Confidence 0.20 below threshold 0.9 — answer failed schema validation or is out of range",
+      "selected_answer": "80 years"
+    },
+    {
+      "filename": "p1_pre.pdf",
+      "page_number": 1,
+      "question_number": "Q5",
+      "raw_ocr_text": "[see processing_log.json for OCR context]",
+      "confidence_note": "Confidence 0.70 below threshold 0.9",
+      "selected_answer": "American indian or alaska native"
+    },
+    {
+      "filename": "p1_pre.pdf",
+      "page_number": 1,
+      "question_number": "Q6",
+      "raw_ocr_text": "[see processing_log.json for OCR context]",
+      "confidence_note": "Confidence 0.70 below threshold 0.9",
+      "selected_answer": "Man"
     },
     {
       "filename": "p1_pre.pdf",
       "page_number": 1,
       "question_number": "Q7",
       "raw_ocr_text": "[see processing_log.json for OCR context]",
-      "confidence_note": "Confidence 0.20 below threshold 0.7 — answer failed schema validation or is out of range",
-      "selected_answer": "High school graduate or GED"
+      "confidence_note": "Confidence 0.70 below threshold 0.9",
+      "selected_answer": "Some elementary, middle, or high school"
+    },
+    {
+      "filename": "p1_pre.pdf",
+      "page_number": 1,
+      "question_number": "Q10",
+      "raw_ocr_text": "[see processing_log.json for OCR context]",
+      "confidence_note": "Confidence 0.70 below threshold 0.9",
+      "selected_answer": "Excellent"
+    },
+    {
+      "filename": "p1_pre.pdf",
+      "page_number": 1,
+      "question_number": "Q11",
+      "raw_ocr_text": "[see processing_log.json for OCR context]",
+      "confidence_note": "Confidence 0.70 below threshold 0.9",
+      "selected_answer": "Alzheimer’s disease or other dementia"
     },
     {
       "filename": "p1_post.pdf",
       "page_number": 1,
-      "question_number": "Q6",
+      "question_number": "Q8",
       "raw_ocr_text": "[see processing_log.json for OCR context]",
-      "confidence_note": "Confidence 0.20 below threshold 0.7 — answer failed schema validation or is out of range",
-      "selected_answer": "Muy buena"
+      "confidence_note": "Confidence 0.20 below threshold 0.9 — answer failed schema validation or is out of range",
+      "selected_answer": "4.0"
+    },
+    {
+      "filename": "p1_post.pdf",
+      "page_number": 2,
+      "question_number": "Q13b",
+      "raw_ocr_text": "[see processing_log.json for OCR context]",
+      "confidence_note": "Confidence 0.20 below threshold 0.9 — answer failed schema validation or is out of range",
+      "selected_answer": "Yes"
+    },
+    {
+      "filename": "p1_post.pdf",
+      "page_number": 2,
+      "question_number": "Q13c",
+      "raw_ocr_text": "[see processing_log.json for OCR context]",
+      "confidence_note": "Confidence 0.20 below threshold 0.9 — answer failed schema validation or is out of range",
+      "selected_answer": "Yes"
+    },
+    {
+      "filename": "p1_post.pdf",
+      "page_number": 2,
+      "question_number": "Q13d",
+      "raw_ocr_text": "[see processing_log.json for OCR context]",
+      "confidence_note": "Confidence 0.20 below threshold 0.9 — answer failed schema validation or is out of range",
+      "selected_answer": "Yes"
+    },
+    {
+      "filename": "p1_post.pdf",
+      "page_number": 2,
+      "question_number": "Q14",
+      "raw_ocr_text": "[see processing_log.json for OCR context]",
+      "confidence_note": "Confidence 0.20 below threshold 0.9 — answer failed schema validation or is out of range",
+      "selected_answer": "Yes"
     }
   ]
 }

@@ -1,0 +1,9 @@
+.env
+PRE/*.pdf
+POST/*.pdf
+output/
+review/flagged_log.json
+__pycache__/
+*.pyc
+.DS_Store
+hf_cache/

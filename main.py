@@ -34,9 +34,8 @@ from config.settings import (
     CONFIDENCE_THRESHOLD,
     DPI,
     FLAGGED_LOG,
+    HF_MODEL,
     LANGUAGE,
-    OLLAMA_BASE_URL,
-    OLLAMA_MODEL,
     OUTPUT_FOLDER,
     PIPELINE_LOG,
     POST_FOLDER,
@@ -44,7 +43,7 @@ from config.settings import (
     REVIEW_FOLDER,
     STUDY_NAME,
 )
-from pipeline.llm_extractor import check_ollama_connection
+from pipeline.llm_extractor import check_hf_model
 from pipeline.batch_processor import BatchProcessor
 from pipeline.output_writer import OutputWriter
 
@@ -96,14 +95,16 @@ def _preflight_checks() -> bool:
     logger = logging.getLogger(__name__)
     ok = True
 
-    # Check Ollama
-    logger.info("Checking Ollama connection ...")
-    if not check_ollama_connection():
+    # Check HuggingFace model
+    logger.info(f"Loading vision model: {HF_MODEL} ...")
+    if not check_hf_model():
         logger.error(
-            "Ollama is not reachable. "
-            f"Model: {OLLAMA_MODEL}  URL: {OLLAMA_BASE_URL}\n"
-            "  → Start Ollama:       ollama serve\n"
-            f"  → Pull the model:    ollama pull {OLLAMA_MODEL}"
+            f"Failed to load HuggingFace model: {HF_MODEL}\n"
+            "  → Make sure the model is cached in HF_HOME (or $SCRATCH/hf_cache).\n"
+            "  → Pre-download with: python -c \"from transformers import "
+            "Qwen2VLForConditionalGeneration, AutoProcessor; "
+            f"Qwen2VLForConditionalGeneration.from_pretrained('{HF_MODEL}'); "
+            f"AutoProcessor.from_pretrained('{HF_MODEL}')\""
         )
         ok = False
 
@@ -150,7 +151,7 @@ def main() -> int:
     logger.info(f"  PRE folder:        {PRE_FOLDER.resolve()}")
     logger.info(f"  POST folder:       {POST_FOLDER.resolve()}")
     logger.info(f"  Output folder:     {OUTPUT_FOLDER.resolve()}")
-    logger.info(f"  Ollama model:      {OLLAMA_MODEL}  @ {OLLAMA_BASE_URL}")
+    logger.info(f"  Vision model:      {HF_MODEL}")
     logger.info(f"  OCR language:      {LANGUAGE}")
     logger.info(f"  DPI:               {DPI}")
     logger.info(f"  Batch size:        {BATCH_SIZE}")

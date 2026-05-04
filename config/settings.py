@@ -35,10 +35,13 @@ OUTPUT_FOLDER: Path = Path(os.getenv("OUTPUT_FOLDER", "./output"))
 BATCH_SIZE: int = int(os.getenv("BATCH_SIZE", "50"))
 
 # ---------------------------------------------------------------------------
-# Ollama (local vision LLM)
+# HuggingFace vision-language model (runs locally via PyTorch / CUDA)
 # ---------------------------------------------------------------------------
-OLLAMA_MODEL: str = os.getenv("OLLAMA_MODEL", "llava")
-OLLAMA_BASE_URL: str = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434").rstrip("/")
+# Recommended models for a 16 GB T4 GPU (all fit in fp16):
+#   Qwen/Qwen2-VL-2B-Instruct   (~4 GB VRAM) — fast, good accuracy
+#   Qwen/Qwen2-VL-7B-Instruct   (~14 GB VRAM) — higher accuracy, tight on T4
+#   Qwen/Qwen2.5-VL-3B-Instruct (~6 GB VRAM) — newer architecture
+HF_MODEL: str = os.getenv("HF_MODEL", "Qwen/Qwen2-VL-2B-Instruct")
 
 # ---------------------------------------------------------------------------
 # OCR
